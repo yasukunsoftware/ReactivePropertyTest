@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,9 +21,21 @@ namespace WpfAppReactiveProperty
     /// </summary>
     public partial class MainWindow : Window
     {
+        private ViewModel _vm = new ViewModel();
         public MainWindow()
         {
             InitializeComponent();
+            _vm.PropertyChanged += PropertyChangedEventHandler;
+        }
+
+        private void PropertyChangedEventHandler(object sender, PropertyChangedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            _vm.SelectedMode = 2;
         }
     }
 }
