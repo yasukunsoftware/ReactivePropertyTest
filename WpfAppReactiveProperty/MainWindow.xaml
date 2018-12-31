@@ -6,8 +6,13 @@
         xmlns:local="clr-namespace:WpfAppReactiveProperty"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    <Window.DataContext>
+        <local:ViewModel/>
+    </Window.DataContext>
     <Grid>
         <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="54,49,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <RadioButton x:Name="radioButton" Content="SwitchON" IsChecked="{Binding SelectedMode.Value, Mode=TwoWay}" HorizontalAlignment="Left" Margin="54,92,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="radioButton1" Content="SwitchOFF" HorizontalAlignment="Left" Margin="54,112,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

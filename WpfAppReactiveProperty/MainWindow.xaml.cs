@@ -35,7 +35,7 @@ namespace WpfAppReactiveProperty
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            _vm.SelectedMode = 2;
+            _vm.SelectedMode.Value = 2;
         }
     }
 }
